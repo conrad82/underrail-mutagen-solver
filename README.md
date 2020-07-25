@@ -1,8 +1,35 @@
 # underrail-mutagen-solver
 Python script for solving mutagen sequence by brute force with caching.
 
-# installation
-copy files mutagen.py and solver.py to computer, and run solver.py with python3 intepreter
+# installation and use
+copy files mutagen.py and solver.py to computer, and run solver.py with python3 intepreter.
+To use it for a specific game, it is necessary to edit `solver.py`, all the sequences must be pasted into the variable `input_mutagens` between the `''`
+
+```
+input_mutagens = {'Exitus-1': '',
+                  'Echo-1': '',
+                  'Echo-2': '',
+                  'Echo-3': '',
+                  'Echo-4': '',
+                  'Helicon-1': '',
+                  'Helicon-2': '',
+                  'Helicon-3': '',
+                  'Io-1': '',
+                  'Io-2': '',
+                  'Io-3': '',
+                  'Ovid-1': '',
+                  'Ovid-2': '',
+                  'Ovid-3': '',
+                  'Solis-1': '',
+                  'Solis-2': ''}
+```
+After you have entered all known sequences, running the script will output the shortest correct solution, if any exist. Note that the script does not need all mutagens to function. However, Exitus-1 must be defined.
+
+### Maximum number of mutagens
+By default the script stops after 7 mutagens. If this is not sufficient you must increase the `maximum_mutagens` function variable.
+Be warned, this will take a long time to run!
+
+Example with 10 mutagens: `mutagen.find_sequence(input_mutagens, maximum_mutagens = 10)`
 
 # output
 Below is the output of the script (from initial commit):
