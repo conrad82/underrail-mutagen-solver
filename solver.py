@@ -1,8 +1,4 @@
-from importlib import reload
 import mutagen
-reload(mutagen)
-
-MAXIMUM_MUTAGENS = 7 # Increasing this number increases runtime
 
 ''' Input sequences, from the game 
     Exitus-1 MUST be defined
